@@ -1,0 +1,123 @@
+/* Global Styles */
+
+* {
+  font-family: 'Roboto', Arial, sans-serif !important;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+
+router-outlet + *  {
+  padding: 0 16px;
+}
+
+/* Text */
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-weight: lighter;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* Hyperlink */
+
+a {
+  cursor: pointer;
+ text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Input */
+
+input {
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+}
+
+
+
+/* Top Bar */
+
+app-top-bar h1, h2 {
+  margin-top: 5px;
+
+}
+/**************/
+
+/*Search Component*/
+.form-search{
+  display:flex;
+}
+.form-search input{
+  border-top-right-radius:0;
+  border-bottom-right-radius: 0;
+}
+.btn-search{
+    color: white;
+    height: 34px;
+    border-top-left-radius: 0;
+    background: #f55f30;
+    border-bottom-left-radius: 0;
+}
+
+.btn-searc:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+  color: white;
+}
+.search-error{
+  font-size:12px;
+  color:red;
+}
+/******************/
+.today-badge
+{
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background: #ccc;
+    padding: 5px 30px;
+    color: white;
+    box-shadow: 2px 3px 8px #ccc;
+}
+.today-badge h2{
+   margin:0;
+}
+
+.forecast-temp p{
+  margin: 0 0 0 10px;
+}
+ 
+.forecast-details{
+   margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

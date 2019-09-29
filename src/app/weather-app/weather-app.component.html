@@ -1,0 +1,38 @@
+<div class="row">
+
+	<div class="col-xs-12">
+		<h2>This is the weather in: {{searchCity}}</h2>
+		<span class="search-error" *ngIf="searchError">Ops! we didn't find a city with that name, please try again.</span>
+	</div>
+	<div class="col-xs-12">
+		<nav class="navbar navbar-light bg-light">
+			<form #searchForecastForm="ngForm" novalidate class="form-search" (ngSubmit)="getWeatherInfo()">
+				<input class="form-control"  name="searchCity" [(ngModel)]="searchCity" placeholder="Search" aria-label="Search" required>
+    <button class="btn btn-search" type="submit">Search</button>
+  </form>
+</nav>
+</div>
+   <div class="col-xs-12">
+     <ul class="list-group">
+  <li class="list-group-item"  [ngClass]="{'todays-forecast': i==0}"  *ngFor="let key of Object.keys(forecast);let i = index">
+    <div class="today-badge" *ngIf="i==0">
+        <h2>Today</h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-4 forecast-temp">
+        <h1>{{forecast[key][0].main.temp}}<span>&#176;</span></h1>
+        <p><b>{{forecast[key][0].weather[0].main}}</b></p>
+        <p>{{forecast[key][0].date |  date:"MMM-dd"}}</p>
+      </div>
+      <div class="col-xs-4 forecast-details">
+       <p>Temp Max: {{forecast[key][0].main.temp_max}} <br>Temp Min: {{forecast[key][0].main.temp_min}} <br>Humidity: {{forecast[key][0].main.humidity}}<br>Wind: {{forecast[key][0].wind.speed}}</p>
+    
+      </div>
+      <div class="col-xs-4 forecast-icon text-right">
+        <img [src]="forecast[key][0].image" width="80" height="80">
+      </div>
+    </div>
+  </li>
+</ul>
+   </div>
+</div>
