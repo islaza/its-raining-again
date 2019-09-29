@@ -28,9 +28,11 @@ The Web App uses https://openweathermap.org/forecast5
 
 ## Environment installation
 
-You just need to have  `Node.js` and `npm` installed
+You need to have  `Node.js` and `npm` installed.
 
 Then just run `npm install` in the project's root.
+
+For the API you will need to sign in and get a unique [API key](https://home.openweathermap.org/users/sign_in "Sign in API")
 
 ## Development Server
 
